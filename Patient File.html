@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" style="padding: 0; margin: 0; width:auto;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient file</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <a href="Patient File.html?patientNameID=Amira&dateOfBirth=16/3/2002&gender=Female&Dateoflastvisit=16/3/2022&ChronicDiseases=Diabetes&CurrentTreatment=Insulin"
+        style="color: inherit; text-decoration: none;">Open Patient File</a>
+    <div class="container-fluid" style="display: flex;">
+        <!-- الأقسام الجانبية -->
+        <div class="col-md-2">
+            <!-- أزرار القائمة -->
+            <!-- قائمة المرضى -->
+            <!-- قائمة المرضى -->
+            <button
+                style=" margin-top: 50px; height: 25px; width: 220px; border: solid 1px #77C5CA; color: #918f8f; background-color: #cac9c9; padding-left: 1rem;padding-right: 1rem; border-radius: 2rem;"><i
+                    class='fas fa-user-alt' style="color: #77C5CA;"></i><a href="./index1.html">&nbsp; Patients
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40K</a></button>
+            <!-- قائمة الأدوية -->
+            <button
+                style="margin-top: 1rem; height: 25px; width: 220px; border: solid 1px #77C5CA; color : #918f8f; background-color:white; padding-left: 1rem;padding-right: 1rem;border-radius: 2rem;"><i
+                    class='fas fa-pills' style="color: #77C5CA;"></i><a href="./index2.html">&nbsp; Drugs
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12m</a></button>
+            <!-- قائمة الأطباء -->
+            <button
+                style="margin-top: 1rem; height: 25px; width: 220px; border: solid 1px #77C5CA; color: #918f8f; background-color:white;  padding-left: 1rem;padding-right: 1rem;border-radius: 2rem;"><i
+                    class='fas fa-user-md' style="color: #77C5CA;"></i><a href="./index3.html">&nbsp; Doctors
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 222</a></button>
+            <!-- زر إضافة قسم -->
+            <button
+                style="margin-top: 1rem; height: 25px; width: 220px; border: solid 1px #77C5CA; color: #918f8f; background-color:white;  padding-left: 1rem;padding-right: 1rem;border-radius: 2rem;"><i
+                    class='fas fa-shopping-bag' style="color: #77C5CA;"></i>&nbsp; Add Block
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.2K</button>
+            <!-- زر المساعدة -->
+            <button
+                style="margin-top: 1rem; height: 25px; width: 220px; padding-left: 1rem;padding-right: 1rem; margin-top:87.1vh"><i
+                    class='fas fa-chart-pie' style="color: #77C5CA;"></i>&nbsp; Help and Support</h6>
+                <!-- زر الإعدادات -->
+                <button
+                    style="margin-top: 1rem;  height: 25px; width: 220px; padding-left: 1rem;padding-right: 1rem;"><i
+                        class='far fa-chart-bar' style="color: #77C5CA;"></i>&nbsp; Preferences</h6>
+        </div>
+        <!-- المحتوى الرئيسي -->
+        <div class="col-md-10" style="background-color: #77C5CA; margin-left: 0.92rem;height: 1100px;">
+            <!-- عنوان الصفحة والأزرار -->
+            <div style="display: flex; margin-top: 1rem; border-bottom:solid 2px; color: white;">
+                <h4 style="margin-left: 25px; color: white;"><i class='fas fa-arrow-left'></i> Patient file</h5>
+                    <button
+                        style="background-color: white; border-radius: 5rem; height: 35px; width: 120px; margin-left: 57%; margin-bottom: 10px; text-align: center;">Scan
+                        Id</button>
+                    <button
+                        style="background-color: white; border-radius: 5rem; height: 35px; width: 120px; margin-left: 5px; margin-bottom: 10px; text-align: center;">Rigister
+                        Visit</button>
+                    <button
+                        style="background-color: white; border-radius: 5rem; height: 35px; width: 35px; margin-left: 5px; margin-bottom: 10px; text-align: center;">...</button>
+            </div>
+            <!-- معلومات المريض -->
+            <div style="display: flex;">
+                <!-- القسم الأيسر -->
+                <div class="col-md-4">
+                    <!-- بيانات شخصية -->
+                    <div
+                        style="background-color: white; padding-left: 3rem; margin-top: 1rem; padding-top: 1rem; padding-bottom: 1rem;">
+                        <img src="./img/13profile.jpg" alt=""
+                            style="width: 180px; border-radius: 25px;margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                        <h6 style="color: #4e4d4d;">Feraia</h6>
+                        <h6 style="color: green;">Active</h6>
+                        <h6 style="color: #4e4d4d;">Feraia</h6>
+                        <h6 style="color:#918f8f">Gender &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Female
+                        </h6>
+                        <h6 style="color:#918f8f">Age &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                            &nbsp;&nbsp; &nbsp;21</h6>
+                        <h6 style="color:#918f8f">Langauge &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;English</h6>
+                        <h6 style="color:#918f8f">Tags</h6>
+                        <h6><strong>#young #female #blond <br>+12</strong></h6>
+                    </div>
+                    <!-- الحساسيات -->
+                    <div
+                        style="background-color: white; padding-left: 3rem; margin-top: 1.5rem;padding-top: 1rem; padding-bottom: 1rem;">
+                        <h6>Allergies</h6>
+                        <h6>Penicillin &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<span style="color: red;">High</span></h6>
+                        <h6>Tilorone &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<span style="color: #77C5CA">Medium</span></h6>
+                        <a href="">+ Add allegry</a>
+                    </div>
+                    <!-- الملاحظات -->
+                    <div
+                        style="background-color: white; padding-left: 3rem;margin-top: 1.5rem;padding-top: 1rem; padding-bottom: 1rem;">
+                        <h5>Notes</h5>
+                        <h6>The last time he looked sick he had a headache and brain pain due to high <br>blood pressure
+                        </h6>
+                    </div>
+                </div>
+                <!-- القسم الأيمن -->
+                <div class="col-md-8" style="height: 980px;">
+                    <!-- أزرار التحكم -->
+                    <button
+                        style="margin-top: 0.9rem;border-top-left-radius: 10px;border-top-right-radius: 10px; background-color: white;">General</button>
+                    <!-- محتوى التفاصيل -->
+                    <div style="width: 100%;height: 87.5%;background-color: white;"><!-- تفاصيل شخصية -->
+                        <h5 style="margin-left: 3rem;padding-top: 2.5rem;">Personal Details</h5>
+                        <div style="display: flex; justify-content: space-around; margin-top: 3rem;">
+                            <h6 style="color: #918f8f;">Patient Name <i class='fas fa-user-alt'
+                                    style="color: #77C5CA;"></i></h6>
+                            <h6 style="color: #918f8f;">Date of Birth <i class='far fa-calendar'
+                                    style="color: #77C5CA;"></i></h6>
+                            <h6 style="color: #918f8f;">Gender <i class='fas fa-user-alt' style="color: #77C5CA;"></i>
+                            </h6>
+                        </div>
+                        <div style="display: flex; justify-content: space-around; margin-top: 3rem;">
+                            <h6 id="patientNameID">&nbsp;&nbsp;</h6>
+                            <h6 id="dateOfBirth">&nbsp;&nbsp;</h6>
+                            <h6 id="gender">&nbsp;&nbsp;</h6>
+                        </div>
+                        <div style="display: flex; justify-content: space-around; margin-top: 3rem;">
+                            <h6 style="color: #918f8f;">Date last visit <i class='far fa-calendar'
+                                    style="color: #77C5CA;"></i></h6>
+                            <h6 style="color: #918f8f;">Chronic Diseases</h6>
+                            <h6 style="color: #918f8f;">Current Treatment </h6>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-around; margin-top: 3rem; border-bottom: solid 2px; color: #77C5CA; padding-bottom: 1rem;">
+                            <h6 id="lastVisitDate"></h6>
+                            <h6 id="ChronicDiseases"></h6>
+                            <h6 id="CurrentTreatment"></h6>
+                        </div>
+                        <!-- تشخيصات سابقة -->
+                        <h5 style="margin-left: 4.5rem; margin-top: 3rem;">Previous diagnoses of the patient </h5>
+                        <div style="margin-left: 4.5rem; justify-content: space-around; margin-top: 3rem;">
+                            <h6><span id="previousDiagnoses"></span></h6>
+                        </div>
+                        <!-- زر إضافة تشخيص -->
+                        <div style="margin-left: 73%; margin-top: 7rem;">
+                            <a href="">+ Add Other Diseases</a>
+                        </div>
+                    </div>
+                    <!-- أزرار التعديل والحذف -->
+                    <button class="edit-btn"
+                        style="background-color: white; height: 35px; width: 120px; margin-left: 57%; margin-top: 20px; text-align: center;">Edit</button>
+                    <button class="delete-btn"
+                        style="background-color: white;  height: 35px; width: 120px; margin-left: 5px; margin-top: 20px; text-align: center;">Delete</button>
+                    <button
+                        style="background-color: white;  height: 35px; width: 35px; margin-left: 5px; margin-top: 20px; text-align: center;">...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getPId() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            const pId = urlParams.get('pid');
+
+            return pId;
+        }// Retrieve parameters from URL
+        const pId = getPId();
+        const patientData = JSON.parse(localStorage.getItem('blocksData'))?.find(p => p.id === Number(pId));
+        console.log(patientData);
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const patientName = urlParams.get('patientNameID');
+        // const dateOfBirth = urlParams.get('dateOfBirth');
+        // const gender = urlParams.get('gender');
+        // const lastVisitDate = urlParams.get('Datelastvisit'); // تم تحديث هذا الجزء
+        // const chronicDiseases = urlParams.get('ChronicDiseases');
+        // const currentTreatment = urlParams.get('CurrentTreatment');
+
+        // Update HTML elements with retrieved parameters
+        document.getElementById("patientNameID").innerHTML = `${patientData?.name ?? ''} ${patientData?.patientNameID ?? ''}`;
+        document.getElementById("dateOfBirth").innerHTML = patientData.dateOfBirth;
+        document.getElementById("gender").innerHTML = patientData.gender;
+        document.getElementById("lastVisitDate").innerHTML = `${patientData.lastVisitDate ?? ''} ${patientData.Datelastvisit ?? ''}`;
+        document.getElementById("ChronicDiseases").innerHTML = `${patientData?.chronicDiseases ?? ''}`;
+        document.getElementById("CurrentTreatment").innerHTML = `${patientData?.currentTreatment ?? ''}`;
+
+        document.querySelector('button.edit-btn').addEventListener("click",
+            function goToEdit() {
+                console.log(patientData);
+                // document.querySelector('.edit-btn').onClick = function () {
+                console.log(pId);
+                window.location.href = 'edit.html?pid=' + pId;
+                // }
+            });
+
+        // Collecting data from the fields
+        // var patientData = {
+        //     name: document.getElementById('patientNameID').innerHTML,
+        //     dateOfBirth: document.getElementById('dateOfBirth').innerHTML,
+        //     gender: document.getElementById('gender').innerHTML,
+        //     lastVisitDate: document.getElementById('lastVisitDate').innerHTML,
+        //     chronicDiseases: document.getElementById('ChronicDiseases').innerHTML,
+        //     currentTreatment: document.getElementById('CurrentTreatment').innerHTML
+        //     // Add other fields here if needed
+        // };
+
+        // // Storing the data in Local Storage
+        // localStorage.setItem('patientData', JSON.stringify(patientData));
+    </script>
+</body>
+
+</html>
