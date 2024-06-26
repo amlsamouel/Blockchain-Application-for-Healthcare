@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Drug</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid body-container">
+        <div class="row h-100">
+
+            <aside id="navbar" class="col-lg-2 px-0"></aside>
+
+            <main class="col-lg-10 p-0 main-body">
+
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <h2 class="ms-3 my-2" style="color: #77C5CA;">Add Drug</h2>
+                    </div>
+                </nav>
+
+                <div class="success-msg d-none mt-3"></div>
+
+                <div class="row gap-3 w-75 p-5">
+                    <form method="post" id="add_drug_form">
+                        <div class="mb-3">
+                            <label for="add_drug_name" class="form-label fw-semibold">Name: </label>
+                            <input type="text" name="addDrugName" class="form-control" id="add_drug_name" style="padding-block:1.2rem">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="add_drug_type" class="form-label fw-semibold">Type: </label>
+                            <input type="text" name="addDrugType" class="form-control" id="add_drug_type" style="padding-block:1.2rem">
+                        </div>
+                        <div class="mb-3">
+                            <label for="add_drug_creation_date" class="form-label fw-semibold">Creation Date: </label>
+                            <input type="text" name="addDrugCreationDate" class="form-control" id="add_drug_creation_date"
+                                style="padding-block:1.2rem">
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-success mt-3">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="fontawesome/js/fontawesome.min.js"></script>
+    <script src="navbar.js"></script>
+
+    <script>
+        document.getElementById('add_drug_form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const drugData = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/add-drug', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(drugData)
+            });
+            if (response.ok) {
+                $('.success-msg').removeClass('d-none').addClass('d-block').html(`<div class="alert alert-success mb-0" role="alert">Drug has been added succefully!</div>`);
+            }
+            else {
+                console.error(response.error);
+            }
+        });
+    </script>
+</body>
+
+</html>

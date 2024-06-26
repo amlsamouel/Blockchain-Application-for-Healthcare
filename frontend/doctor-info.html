@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid body-container">
+        <div class="row h-100">
+
+            <aside id="navbar" class="col-lg-2 px-0"></aside>
+
+            <main class="col-lg-10 p-0 main-body">
+
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <h2 class="ms-3 my-2" style="color: #77C5CA;">Doctor Information</h2>
+                    </div>
+                </nav>
+
+                <div class="row flex-nowrap col-12 gap-3 p-5">
+                    <div class="col-md-4">
+                        <div
+                            style="background-color: white; padding-left: 3rem; padding-top: 1rem; padding-bottom: 1rem;">
+                            <img src="./img/13profile.jpg" alt=""
+                                style="width: 180px; border-radius: 25px;margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                            <h6 style="color: #4e4d4d;"><span class="name"></span></h6>
+                            <h6 style="color: green;">Active</h6>
+                            <h6 style="color:#918f8f">Gender: <span class="gender text-capitalize"></span></h6>
+                            <h6 style="color:#918f8f">Age: 21</h6>
+                            <h6 style="color:#918f8f">Langauge: English</h6>
+                            <h6 style="color:#918f8f">Tags</h6>
+                            <h6><strong>#young #female #blond <br>+12</strong></h6>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div style="background-color: white;">
+                            <button class="fw-bolder"
+                                style="border-top-right-radius: 10px;border-bottom-left-radius: 10px; background-color: #77C5CA;">General</button>
+                            <div style="display: flex; justify-content: space-around; margin-top: 3rem;">
+                                <h6 style="color: #918f8f;">Name</h6>
+                                <h6 style="color: #918f8f;">Gender</h6>
+                                <h6 style="color: #918f8f;">Email</h6>
+                            </div>
+                            <div style="display: flex; justify-content: space-around; margin-top: 3rem;">
+                                <h6 class="name"></h6>
+                                <h6 class="gender text-capitalize"></h6>
+                                <h6 class="email"></h6>
+                            </div>
+                            <div style="display: flex; justify-content: space-around; margin-top: 3rem;">
+                                <h6 style="color: #918f8f;">Phone</h6>
+                                <h6 style="color: #918f8f;">Specialization</h6>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-around; margin-top: 3rem; border-bottom: solid 2px; color: #77C5CA; padding-bottom: 1rem;">
+                                <h6 class="phone"></h6>
+                                <h6 class="specialization"></h6>
+                            </div>
+
+
+                            <div
+                                style="background-color: white; padding-left: 3rem; margin-top: 1.5rem;padding-top: 1rem; padding-bottom: 1rem;">
+                                <p> This page contains all the doctor’s information, such as name, gender, email, phone
+                                    number, and specialty.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="fontawesome/js/fontawesome.min.js"></script>
+    <script src="navbar.js"></script>
+
+    <script>
+        async function fetchDoctors() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const doctor_id = urlParams.get('doctor-id');
+
+            try {
+                const response = await fetch(`/doctor/${doctor_id}`);
+                const data = await response.json();
+                displayDoctor(data);
+            } 
+            catch (error) {
+                console.error('Error fetching doctors:', error);
+            }
+        }
+
+        function displayDoctor(doctor) {
+            document.querySelectorAll('.name').forEach((nameElement) => nameElement.innerHTML = doctor.name);
+            document.querySelectorAll('.gender').forEach((genderElement) => genderElement.innerHTML = doctor.gender);
+            document.querySelector('.email').innerHTML = doctor.email;
+            document.querySelector('.phone').innerHTML = doctor.phone;
+            document.querySelector('.specialization').innerHTML = doctor.specialization;
+        }
+
+        fetchDoctors();
+    </script>
+</body>
+
+</html>
